@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.cpp
+vector
+-
+iostream
+-
+cmath
+-
+
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.h
+
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/main.cpp
+fstream
+-
+string
+-
+sstream
+-
+vector
+-
+iostream
+-
+cmath
+-
+grcv2d.h
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.h
+
