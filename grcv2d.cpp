@@ -215,7 +215,7 @@ void stret(std::vector<double>& x, std::vector<double>& y, double s1, double s2,
     if(b < 0.999){
         double dz = fasin(b);
         double tanx;
-        for (int j = 1, j<n, j++){
+        for (int j = 1; j<n; j++){
             tanx = std::tan(dz*x[j]);
             y[j] = tanx/(a*sin(dz) + (1 - a*cos(dz))*tanx);
         }

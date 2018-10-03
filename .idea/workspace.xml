@@ -38,8 +38,8 @@
       <file leaf-file-name="grcv2d.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grcv2d.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="67" column="65" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
+            <state relative-caret-position="255">
+              <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -142,12 +142,12 @@
       <workItem from="1538040335537" duration="4398000" />
       <workItem from="1538106178040" duration="525000" />
       <workItem from="1538313960236" duration="3513000" />
-      <workItem from="1538380427708" duration="5338000" />
+      <workItem from="1538380427708" duration="5489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27089000" />
+    <option name="totallyTimeSpent" value="27240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="23" width="1669" height="946" extended-state="0" />
@@ -389,8 +389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grcv2d.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="67" column="65" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
+        <state relative-caret-position="255">
+          <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
         </state>
       </provider>
     </entry>
