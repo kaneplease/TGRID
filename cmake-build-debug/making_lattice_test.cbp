@@ -91,6 +91,9 @@
 		<Unit filename="/Users/hattoriatsuki/CLionProjects/making_lattice_test/main.cpp">
 			<Option target="making_lattice_test"/>
 		</Unit>
+		<Unit filename="/Users/hattoriatsuki/CLionProjects/making_lattice_test/naca.cpp">
+			<Option target="making_lattice_test"/>
+		</Unit>
 		<Unit filename="/Users/hattoriatsuki/CLionProjects/making_lattice_test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/making_lattice_test.dir/build.make CMakeFiles/making_lattice_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+naca.o: naca.cpp.o
+
+.PHONY : naca.o
+
+# target to build an object file
+naca.cpp.o:
+	$(MAKE) -f CMakeFiles/making_lattice_test.dir/build.make CMakeFiles/making_lattice_test.dir/naca.cpp.o
+.PHONY : naca.cpp.o
+
+naca.i: naca.cpp.i
+
+.PHONY : naca.i
+
+# target to preprocess a source file
+naca.cpp.i:
+	$(MAKE) -f CMakeFiles/making_lattice_test.dir/build.make CMakeFiles/making_lattice_test.dir/naca.cpp.i
+.PHONY : naca.cpp.i
+
+naca.s: naca.cpp.s
+
+.PHONY : naca.s
+
+# target to generate assembly for a file
+naca.cpp.s:
+	$(MAKE) -f CMakeFiles/making_lattice_test.dir/build.make CMakeFiles/making_lattice_test.dir/naca.cpp.s
+.PHONY : naca.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... naca.o"
+	@echo "... naca.i"
+	@echo "... naca.s"
 .PHONY : help
 
 

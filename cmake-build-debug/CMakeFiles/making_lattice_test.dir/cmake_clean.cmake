@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/making_lattice_test.dir/main.cpp.o"
   "CMakeFiles/making_lattice_test.dir/grcv2d.cpp.o"
+  "CMakeFiles/making_lattice_test.dir/naca.cpp.o"
   "making_lattice_test.pdb"
   "making_lattice_test"
 )

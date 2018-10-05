@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.cpp" "/Users/hattoriatsuki/CLionProjects/making_lattice_test/cmake-build-debug/CMakeFiles/making_lattice_test.dir/grcv2d.cpp.o"
   "/Users/hattoriatsuki/CLionProjects/making_lattice_test/main.cpp" "/Users/hattoriatsuki/CLionProjects/making_lattice_test/cmake-build-debug/CMakeFiles/making_lattice_test.dir/main.cpp.o"
+  "/Users/hattoriatsuki/CLionProjects/making_lattice_test/naca.cpp" "/Users/hattoriatsuki/CLionProjects/making_lattice_test/cmake-build-debug/CMakeFiles/making_lattice_test.dir/naca.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
