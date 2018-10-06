@@ -13,17 +13,19 @@ void clst2(int n, double sp1, double sp2, std::vector<double>& xout);
 void stret(std::vector<double>& x, std::vector<double>& y, double s1, double s2, int n);
 double fasin(double y);
 double fasinh(double y);
-double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp, double xx, double f);
+double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp, double xx);
 
 
 void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, double k, double dl1, double dl2,
             std::vector<double>& xout, std::vector<double>& yout){
+
     std::vector<double> arcs(301), cspx(301), cspy(301), sn(301);
+
     for(int j=1; j<nin; j++){
         arcs[j] = arcs[j-1] + std::sqrt(std::pow(xin[j]-xin[j-1], 2.0) + std::pow(yin[j] - yin[j-1],2.0));
     }
 
-    /*    for(auto itr=arcs.begin(); itr<arcs.end(); itr++){
+/*    for(auto itr=arcs.begin(); itr<arcs.end(); itr++){
         std::cout << *itr << std::endl;
     }*/
 
@@ -53,6 +55,7 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
         clst2(n, sl1, sl2, sn);
     }
 
+
     /*
      * ARCS ---> XOUT, YOUT
      */
@@ -62,16 +65,14 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
         for(int i = 0; i<n; i++){
             xout[i] = (1 - sn[i])*xin[0] + sn[i] * xin[1];
             yout[i] = (1 - sn[i])*yin[0] + sn[i] * yin[1];
-
-
         }
     }else{
         for(int i = 0; i<n; i++){
-            double snd = sn[i] * arcs[nin];
-            xout[i] = speval(nin, arcs, xin, cspx, snd, xout[i]);
-            yout[i] = speval(nin, arcs, yin, cspx, snd, yout[i]);
+            double snd = sn[i] * arcs[nin - 1];
+            xout[i] = speval(nin, arcs, xin, cspx, snd);
+            yout[i] = speval(nin, arcs, yin, cspy, snd);
 
-
+            //std::cout << snd << std::endl;
         }
     }
 
@@ -287,7 +288,7 @@ double fasinh(double y){
     }
 }
 
-double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp, double xx, double f){
+double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp, double xx){
     for (int i = 0; i < nin - 2; i++){
         if(xx <= x[i+1]){
             double dxm = xx - x[i];
@@ -298,5 +299,5 @@ double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vect
             //continue
         }
     }
-    return -1;
+    return 0;
 }

@@ -50,6 +50,7 @@ double tinput(){
     }
     const int nwallh = (nwall + 1)/2;
     grcv2d(jleadw, x1, y1, nwallh, 1, 0.5, 0.5, x2, y2);
+    std::cout << jleadw << " " << nwallh << " " << std::endl;
 
     //TEST
     //ファイルチェック
