@@ -21,6 +21,7 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
 
     std::vector<double> arcs(301), cspx(301), cspy(301), sn(301);
 
+    arcs[0] = 0;
     for(int j=1; j<nin; j++){
         arcs[j] = arcs[j-1] + std::sqrt(std::pow(xin[j]-xin[j-1], 2.0) + std::pow(yin[j] - yin[j-1],2.0));
     }
@@ -45,8 +46,8 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
     double sl2 = dl2 / arcs[nin - 1];
 
     if(k != 0){
-        sl1 = dl1 / static_cast<double>(nin - 1);
-        sl2 = dl2 / static_cast<double>(nin - 1);
+        sl1 = dl1 / static_cast<double>(n - 1);
+        sl2 = dl2 / static_cast<double>(n - 1);
     }
 
     if(sl2 <= 0){
@@ -54,7 +55,9 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
     }else{
         clst2(n, sl1, sl2, sn);
     }
-
+/*    for(auto itr=sn.begin(); itr<sn.end(); itr++){
+        std::cout << *itr << std::endl;
+    }*/
 
     /*
      * ARCS ---> XOUT, YOUT
@@ -100,9 +103,9 @@ void spline(int nin, std::vector<double>& x, std::vector<double>& y, std::vector
     }
     fdp[n1 - 1] = r[n1 - 1]/b[n1 - 1];
 
-    for (int i = 1; i < nin - 2; i++){
+    for (int i = 3; i < nin; i++){
         int nmi = nin - i;
-        fdp[nmi - 1] = (r[nmi - 1] - c[nmi - 1] * fdp[nmi])/b[nmi - 1];
+        fdp[nmi] = (r[nmi] - c[nmi] * fdp[nmi + 1])/b[nmi];
     }
     fdp[0] = fdp[1];
     fdp[nin-1] = fdp[n1 - 1];
@@ -202,7 +205,7 @@ void clst2(int n, double sp1, double sp2, std::vector<double>& xout){
             stret(xin, xout, s12, s22, n);
 
             dx1 = xout[1];
-            dx2 = xout[n - 1] - xout[n1];
+            dx2 = xout[n - 1] - xout[n1 - 1];
             if(fabs(sp1 - dx1) <= smal && fabs(sp2 - dx2) <= smal){
                 break;
             }
@@ -222,7 +225,7 @@ void stret(std::vector<double>& x, std::vector<double>& y, double s1, double s2,
     if(b < 0.999){
         double dz = fasin(b);
         double tanx;
-        for (int j = 1; j<n; j++){
+        for (int j = 0; j<n; j++){
             tanx = std::tan(dz*x[j]);
             y[j] = tanx/(a*sin(dz) + (1 - a*cos(dz))*tanx);
         }
@@ -299,5 +302,5 @@ double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vect
             //continue
         }
     }
-    return 0;
+    return -1;
 }
