@@ -5,4 +5,8 @@ CMakeFiles/making_lattice_test.dir/grcv2d.cpp.o: ../grcv2d.cpp
 
 CMakeFiles/making_lattice_test.dir/main.cpp.o: ../grcv2d.h
 CMakeFiles/making_lattice_test.dir/main.cpp.o: ../main.cpp
+CMakeFiles/making_lattice_test.dir/main.cpp.o: ../naca.h
+
+CMakeFiles/making_lattice_test.dir/naca.cpp.o: ../grcv2d.h
+CMakeFiles/making_lattice_test.dir/naca.cpp.o: ../naca.cpp
 

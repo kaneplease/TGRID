@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include "grcv2d.h"
+#include "naca.h"
 
 std::vector<std::string> split(std::string& input, char delimiter);
 
@@ -40,7 +41,8 @@ int main() {
     //////////////////////////////////////////
 
 
-    grcv2d(nin, x, y, n, k, dl1, dl2, xout, yout);
+    //grcv2d(nin, x, y, n, k, dl1, dl2, xout, yout);
+    tinput();
 
     return 0;
 }

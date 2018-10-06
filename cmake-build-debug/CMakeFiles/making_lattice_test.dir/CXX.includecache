@@ -31,4 +31,20 @@ cmath
 -
 grcv2d.h
 /Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.h
+naca.h
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/naca.h
+
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/naca.cpp
+vector
+-
+iostream
+-
+cmath
+-
+fstream
+-
+grcv2d.h
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/grcv2d.h
+
+/Users/hattoriatsuki/CLionProjects/making_lattice_test/naca.h
 

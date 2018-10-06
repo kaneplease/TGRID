@@ -56,16 +56,22 @@ void grcv2d(int nin, std::vector<double>& xin, std::vector<double>& yin, int n, 
     /*
      * ARCS ---> XOUT, YOUT
      */
+
+
     if(nin == 2){
         for(int i = 0; i<n; i++){
             xout[i] = (1 - sn[i])*xin[0] + sn[i] * xin[1];
             yout[i] = (1 - sn[i])*yin[0] + sn[i] * yin[1];
+
+
         }
     }else{
         for(int i = 0; i<n; i++){
             double snd = sn[i] * arcs[nin];
             xout[i] = speval(nin, arcs, xin, cspx, snd, xout[i]);
             yout[i] = speval(nin, arcs, yin, cspx, snd, yout[i]);
+
+
         }
     }
 
@@ -292,4 +298,5 @@ double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vect
             //continue
         }
     }
+    return -1;
 }
