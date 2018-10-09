@@ -8,7 +8,7 @@
 
 void spline(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp);
 void clst1(int n, double dx1, std::vector<double>& x);
-double clst1_sub(double e, double dx1, int n1);
+double clst1_sub(double e, double dx1, int n1, double dx);
 void clst2(int n, double sp1, double sp2, std::vector<double>& xout);
 void stret(std::vector<double>& x, std::vector<double>& y, double s1, double s2, int n);
 double fasin(double y);
@@ -121,10 +121,11 @@ void clst1(int n, double dx1, std::vector<double>& x){
         e = 1;
     }
     else{
-        e = clst1_sub(1.2, dx1, n1);
+        double e1 = 1.2;
+        e = clst1_sub(e1, dx1, n1, dx);
         while(std::abs(e - 1.0) < 1.0e-5){
-            double e1 = std::pow(e, 2.0);
-            e = clst1_sub(e1, dx1, n1);
+            e1 = std::pow(e1, 2.0);
+            e = clst1_sub(e1, dx1, n1, dx);
         }
         //例外処理
         if(e < 0){
@@ -140,12 +141,16 @@ void clst1(int n, double dx1, std::vector<double>& x){
     return;
 }
 
-double clst1_sub(double e, double dx1, int n1){
+double clst1_sub(double e, double dx1, int n1, double dx){
     int iter = 0;
     double ep;
+    if(dx1 > dx){
+        e = 1 / e;
+    }
     while(1){
         ep = e;
-        e = ep - (std::pow(dx1 * ep,n1) - ep + 1.0 - dx1)/(std::pow(dx1 * static_cast<double>(n1) * e, n1 - 1.0));
+        e = ep - (dx1 * std::pow(ep,n1) - ep + 1.0 - dx1)/(dx1 * static_cast<double>(n1) * std::pow(ep, n1 - 1.0) - 1);
+        //std::cout << e << " " << ep << " " << iter << std::endl;
         if(std::abs(e - ep) < 1.0e-5){
             return e;
         }
@@ -154,6 +159,7 @@ double clst1_sub(double e, double dx1, int n1){
             std::cout << "Iteration failed in clst1_sub()!" << std::endl;
             return -1;
         }
+        iter += 1;
     }
 }
 
