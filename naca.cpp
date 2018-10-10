@@ -105,9 +105,9 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
             int jj = jtail1 - 1 - j;
             //std::cout << x2[jj] << std::endl;
             x[j][0] = x2[jj];
-            x[jmax-j][0] = x[j][0];
+            x[jmax-j-1][0] = x[j][0];
             y[j][0] = 0;
-            y[jmax-j][0] = y[j][0];
+            y[jmax-j-1][0] = y[j][0];
         }
     }
 
@@ -138,9 +138,9 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     }
     grcv2d(nwk2, x1, y1, jmax, 1, 1, 1, x2, y2);
     for(int j = 0; j<jmax; j++){
-        x[j][kmax] = x2[j];
-        y[j][kmax] = y2[j];
-        std::cout << y[j][kmax] << std::endl;
+        x[j][kmax - 1] = x2[j];
+        y[j][kmax - 1] = y2[j];
+        //std::cout << y[j][kmax] << std::endl;
     }
 
     /*
@@ -149,8 +149,8 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     for(int j = 0; j < jmax; j += jmax - 1){
         x1[0] = x[j][0];
         y1[0] = y[j][0];
-        x1[1] = x[j][kmax];
-        y1[1] = y[j][kmax];
+        x1[1] = x[j][kmax - 1];
+        y1[1] = y[j][kmax - 1];
         //std::cout << ds1 << " " << ds2 << std::endl;
         grcv2d(2, x1, y1, kmax, 0, ds1, ds2, x2, y2);
         for(int k = 1; k<kmax - 1; k++){
@@ -189,8 +189,8 @@ void tcore(int jmax, int kmax, std::vector<std::vector<double>>& x, std::vector<
     for (int j = 0; j < jmax; j++) {
         for (int k = 0; k < kmax; k++) {
             double alpha = 1 - s[j] / s[jmax - 1];
-            x[j][k] = x1[j][k] + alpha * (x[0][k] - x1[0][k]) + (1 - alpha) * (x[jmax][k] - x1[jmax][k]);
-            y[j][k] = y1[j][k] + alpha * (y[0][k] - y1[0][k]) + (1 - alpha) * (y[jmax][k] - y1[jmax][k]);
+            x[j][k] = x1[j][k] + alpha * (x[0][k] - x1[0][k]) + (1 - alpha) * (x[jmax - 1][k] - x1[jmax - 1][k]);
+            y[j][k] = y1[j][k] + alpha * (y[0][k] - y1[0][k]) + (1 - alpha) * (y[jmax - 1][k] - y1[jmax - 1][k]);
             //std::cout << x1[j][k] << std::endl;
         }
     }
