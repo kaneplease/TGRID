@@ -37,14 +37,14 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
      * Airfoil Lower Surface
      */
     for (int i = 0; i<jleadw; i++){
-        x1[i] = 1.0 - static_cast<double>(i - 1)/ static_cast<double>(jleadw - 1);
+        x1[i] = 1.0 - static_cast<double>(i)/ static_cast<double>(jleadw - 1);
         y1[i] = -ynaca(tnaca, x1[i]);
     }
     const int nwallh = (nwall + 1)/2;
     grcv2d(jleadw, x1, y1, nwallh, 1, 0.5, 0.5, x2, y2);
     //std::cout << jtail1 << " " << jlead << " " << std::endl;
 
-/*    //TEST
+    //TEST
     //ファイルチェック
     //csvファイルを出力
     std::ofstream ofscsv("naca0012_1.csv");    //, std::ios::app
@@ -67,7 +67,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
 
     for (int i = 0; i<x2.size() ; i++){
         ofscsv2 << x2[i] << "," << y2[i] << std::endl;
-    }*/
+    }
 
     for(int j = jtail1 - 1; j<jlead; j++){
         int jj = j - jtail1 + 1;
@@ -143,18 +143,6 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
         //std::cout << y[j][kmax] << std::endl;
     }
 
-
-    std::ofstream ofscsv2("naca0012_2.csv");    //, std::ios::app
-    if (!ofscsv2) {
-        std::cerr << "ファイルオープンに失敗" << std::endl;
-        std::exit(1);
-
-    }
-
-    for(int j = 0; j<jmax; j++){
-        ofscsv2 << x2[j] << "," << y2[j] << std::endl;
-    }
-
     /*
      * 下流境界
      */
@@ -175,7 +163,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
 
 double ynaca(double t, double xx){
     double x = xx*1.00893;
-    return (t/ 0.2 * (0.2696 * sqrt(x) - 0.126*x - 0.3516*pow(x, 2.0) + 0.2843*pow(x, 3.0) - 0.1015*pow(x, 4.0)));
+    return (t/ 0.2 * (0.2969 * sqrt(x) - 0.126*x - 0.3516*pow(x, 2.0) + 0.2843*pow(x, 3.0) - 0.1015*pow(x, 4.0)));
 }
 
 void tcore(int jmax, int kmax, std::vector<std::vector<double>>& x, std::vector<std::vector<double>>& y,

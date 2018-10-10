@@ -13,12 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aacfbd60-dee9-4021-93b9-4133fb8b134e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/making_lattice_test.dir/grcv2d.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/making_lattice_test.dir/grcv2d.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/making_lattice_test.dir/naca.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/making_lattice_test.dir/naca.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/making_lattice_test" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/making_lattice_test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mygrid.dat" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mygrid.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/naca0012_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/naca0012_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grcv2d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/grcv2d.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/naca.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/naca.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -47,8 +44,8 @@
       <file leaf-file-name="naca.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naca.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="135" column="35" lean-forward="true" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+            <state relative-caret-position="258">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/naca0012_2.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -65,8 +62,8 @@
       <file leaf-file-name="naca0012_1.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/naca0012_1.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2669">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -74,7 +71,7 @@
       <file leaf-file-name="grcv2d.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grcv2d.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="4500">
               <caret line="300" column="32" selection-start-line="300" selection-start-column="32" selection-end-line="300" selection-end-column="32" />
               <folding>
                 <element signature="e#66#83#0" expanded="true" />
@@ -110,8 +107,8 @@
         <option value="$PROJECT_DIR$/grcv2d.h" />
         <option value="$PROJECT_DIR$/naca.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/naca.cpp" />
         <option value="$PROJECT_DIR$/grcv2d.cpp" />
+        <option value="$PROJECT_DIR$/naca.cpp" />
       </list>
     </option>
   </component>
@@ -136,7 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,6 +149,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,12 +208,13 @@
       <workItem from="1539006306155" duration="1356000" />
       <workItem from="1539078381632" duration="3656000" />
       <workItem from="1539141511435" duration="1348000" />
-      <workItem from="1539154249035" duration="4052000" />
+      <workItem from="1539154249035" duration="5090000" />
+      <workItem from="1539184302874" duration="641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59143000" />
+    <option name="totallyTimeSpent" value="60822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1669" height="946" extended-state="0" />
@@ -242,23 +240,23 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.20642202" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="CMake" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20970641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32798165" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.20642202" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32798165" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.20642202" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32798165" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -625,6 +623,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/mygrid.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20932">
+          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grcv2d.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4500">
+          <caret line="300" column="32" selection-start-line="300" selection-start-column="32" selection-end-line="300" selection-end-column="32" />
+          <folding>
+            <element signature="e#66#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -635,41 +650,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/mygrid.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20932">
-          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grcv2d.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="300" column="32" selection-start-line="300" selection-start-column="32" selection-end-line="300" selection-end-column="32" />
-          <folding>
-            <element signature="e#66#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/naca0012_1.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2669">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/naca0012_2.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/naca.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="135" column="35" lean-forward="true" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+        <state relative-caret-position="258">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
