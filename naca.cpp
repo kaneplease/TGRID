@@ -85,7 +85,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     }
     grcv2d(jleadw, x2, y2, nwallh, 1, 0.5, 0.5, x1, y1);
     for(int j = jlead; j < jtail2; j++){
-        int jj = j - jlead + 1;             //正しい？
+        int jj = j - jlead;             //正しい？
         x[j][0] = x1[jj];
         y[j][0] = y1[jj];
         //std::cout << x[j][0] << std::endl;
@@ -99,7 +99,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
         x1[1] = xdw;
         y1[1] = 0;
         x1[0] = 1;
-        x1[0] = 0;
+        y1[0] = 0;
         grcv2d(2, x1, y1, jtail1, 0, dsx, 0, x2, y2);
         for(int j = 0; j<jtail1-1; j++){
             int jj = jtail1 - 1 - j;
@@ -122,8 +122,8 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
         y1[1] = -rout;
         for(int j = 2; j<nwk2-2; j++){
             double th = 1.5 * M_PI - M_PI/ static_cast<double>(nwk2 - 2 - 1)* static_cast<double>(j - 1);
-            x1[j] = 1 + rout *cos(th);
-            y1[j] = rout + sin(th);
+            x1[j] = 1 + rout * cos(th);
+            y1[j] = rout * sin(th);
         }
         x1[nwk2 - 2] = 1;
         y1[nwk2 - 2] = rout;
@@ -141,6 +141,18 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
         x[j][kmax - 1] = x2[j];
         y[j][kmax - 1] = y2[j];
         //std::cout << y[j][kmax] << std::endl;
+    }
+
+
+    std::ofstream ofscsv2("naca0012_2.csv");    //, std::ios::app
+    if (!ofscsv2) {
+        std::cerr << "ファイルオープンに失敗" << std::endl;
+        std::exit(1);
+
+    }
+
+    for(int j = 0; j<jmax; j++){
+        ofscsv2 << x2[j] << "," << y2[j] << std::endl;
     }
 
     /*

@@ -123,7 +123,7 @@ void clst1(int n, double dx1, std::vector<double>& x){
     else{
         double e1 = 1.2;
         e = clst1_sub(e1, dx1, n1, dx);
-        while(std::abs(e - 1.0) < 1.0e-5){
+        while(std::fabs(e - 1.0) < 1.0e-5){
             e1 = std::pow(e1, 2.0);
             e = clst1_sub(e1, dx1, n1, dx);
         }
@@ -151,7 +151,7 @@ double clst1_sub(double e, double dx1, int n1, double dx){
         ep = e;
         e = ep - (dx1 * std::pow(ep,n1) - ep + 1.0 - dx1)/(dx1 * static_cast<double>(n1) * std::pow(ep, n1 - 1.0) - 1);
         //std::cout << e << " " << ep << " " << iter << std::endl;
-        if(std::abs(e - ep) < 1.0e-5){
+        if(std::fabs(e - ep) < 1.0e-5){
             return e;
         }
         //例外処理（ひとまずの妥協案）
@@ -298,7 +298,7 @@ double fasinh(double y){
 }
 
 double speval(int nin, std::vector<double>& x, std::vector<double>& y, std::vector<double>& fdp, double xx){
-    for (int i = 0; i < nin - 2; i++){
+    for (int i = 0; i < nin - 1 ; i++){
         if(xx <= x[i+1]){
             double dxm = xx - x[i];
             double dxp = x[i + 1] - xx;
