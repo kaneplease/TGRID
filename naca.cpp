@@ -44,6 +44,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     grcv2d(jleadw, x1, y1, nwallh, 1, 0.5, 0.5, x2, y2);
     //std::cout << jtail1 << " " << jlead << " " << std::endl;
 
+/*
     //TEST
     //ファイルチェック
     //csvファイルを出力
@@ -68,6 +69,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     for (int i = 0; i<x2.size() ; i++){
         ofscsv2 << x2[i] << "," << y2[i] << std::endl;
     }
+*/
 
     for(int j = jtail1 - 1; j<jlead; j++){
         int jj = j - jtail1 + 1;
@@ -85,7 +87,7 @@ void tinput(int jdim, int kdim, int jmax, int kmax, std::vector<std::vector<doub
     }
     grcv2d(jleadw, x2, y2, nwallh, 1, 0.5, 0.5, x1, y1);
     for(int j = jlead; j < jtail2; j++){
-        int jj = j - jlead;             //正しい？
+        int jj = j - jlead + 1;             //正しい？
         x[j][0] = x1[jj];
         y[j][0] = y1[jj];
         //std::cout << x[j][0] << std::endl;
